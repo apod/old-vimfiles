@@ -70,12 +70,6 @@ nnoremap <c-k> <c-w>k
 nnoremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
 
-" Move line down/up with <leader>jk
-nmap <leader>j :m+<CR>
-vmap <leader>j :m'>+<CR>gv
-nmap <leader>k :m-2<CR>
-vmap <leader>k :m-2<CR>gv
-
 " Toggle highlight search
 nmap <leader>l :set hls!<CR>
 
