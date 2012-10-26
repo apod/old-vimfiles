@@ -10,5 +10,5 @@ xmap ]e :m'>+<CR>gv
 
 
 " Disable [o ]o mappings 
-nmap <Plug>unimpairedOPrevious <Nop>
-nmap <Plug>unimpairedONext <Nop>
+nmap [o <Nop>
+nmap ]o <Nop>
