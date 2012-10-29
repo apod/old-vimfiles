@@ -69,8 +69,8 @@ nnoremap <C-l> <C-w>l
 cnoremap <C-p> <Up>
 cnoremap <C-n> <Down>
 
-" Toggle highlight search
-nmap <leader>l :set hls!<CR>
+" Mute highlight until next search
+nmap <leader>l :nohlsearch<CR>
 
 " Toggle invisible character symbols
 nmap <leader>h :set list!<CR>
