@@ -48,11 +48,6 @@ colorscheme monokai_customized
 " Always show status line
 set laststatus=2
 
-" Sync with system clipboard, requires +clipboard feature
-if has('clipboard')
-  set clipboard=unnamed
-end
-
 " --------
 " Autocmds
 " --------
