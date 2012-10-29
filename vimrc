@@ -59,11 +59,15 @@ autocmd FileType * setlocal formatoptions-=o
 " Keymaps
 " -------
 
-" Move around windows with <c-hjkl>
-nnoremap <c-j> <c-w>j
-nnoremap <c-k> <c-w>k
-nnoremap <c-h> <c-w>h
-nnoremap <c-l> <c-w>l
+" Move around windows with <C-hjkl>
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-h> <C-w>h
+nnoremap <C-l> <C-w>l
+
+" <C-pn> should filter the command history like <Up>/<Down>
+cnoremap <C-p> <Up>
+cnoremap <C-n> <Down>
 
 " Toggle highlight search
 nmap <leader>l :set hls!<CR>
