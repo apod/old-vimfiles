@@ -61,9 +61,9 @@ autocmd FileType text setlocal spell spelllang=en,el
 " ... and commit logs
 autocmd FileType *commit* setlocal spell
 
-" -------
-" Keymaps
-" -------
+" --------
+" Mappings
+" --------
 
 " Move around windows with <C-hjkl>
 nnoremap <C-j> <C-w>j
@@ -80,6 +80,13 @@ nmap <leader>l :nohlsearch<CR>
 
 " Toggle invisible character symbols
 nmap <leader>h :set list!<CR>
+
+" --------
+" Commands
+" --------
+
+" Use :SudoWrite to write a file using sudo
+command SudoWrite %!sudo tee > /dev/null %
 
 " ---
 " GUI
