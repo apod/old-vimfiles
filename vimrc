@@ -55,6 +55,12 @@ set laststatus=2
 " Disable autocommenting on o O
 autocmd FileType * setlocal formatoptions-=o
 
+" Enable spellchecking for text files
+autocmd FileType text setlocal spell spelllang=en,el
+
+" ... and commit logs
+autocmd FileType *commit* setlocal spell
+
 " -------
 " Keymaps
 " -------
