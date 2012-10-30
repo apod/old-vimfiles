@@ -61,6 +61,10 @@ autocmd FileType text setlocal spell spelllang=en,el
 " ... and commit logs
 autocmd FileType *commit* setlocal spell
 
+" Disable it for help files
+autocmd FileType help setlocal nospell
+
+
 " --------
 " Mappings
 " --------
