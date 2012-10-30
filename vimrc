@@ -69,6 +69,9 @@ autocmd FileType help setlocal nospell
 " Mappings
 " --------
 
+" Remap manual page key K to nothing
+nnoremap K <Nop>
+
 " Move around windows with <C-hjkl>
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
