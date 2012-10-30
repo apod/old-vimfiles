@@ -76,6 +76,7 @@ autocmd FileType javascript     setlocal ts=4 sts=4 sw=4 noet
 
 " Remap manual page key K to nothing
 nnoremap K <Nop>
+vnoremap K <Nop>
 
 " Move around windows with <C-hjkl>
 nnoremap <C-j> <C-w>j
