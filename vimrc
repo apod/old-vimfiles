@@ -64,6 +64,11 @@ autocmd FileType *commit* setlocal spell
 " Disable it for help files
 autocmd FileType help setlocal nospell
 
+" Some default whitespace settings
+autocmd FileType ruby,yaml      setlocal ts=2 sts=2 sw=2 et
+autocmd FileType eruby,html,css setlocal ts=4 sts=4 sw=4 et
+autocmd FileType python         setlocal ts=4 sts=4 sw=4 et
+autocmd FileType javascript     setlocal ts=4 sts=4 sw=4 noet
 
 " --------
 " Mappings
@@ -71,6 +76,7 @@ autocmd FileType help setlocal nospell
 
 " Remap manual page key K to nothing
 nnoremap K <Nop>
+vnoremap K <Nop>
 
 " Move around windows with <C-hjkl>
 nnoremap <C-j> <C-w>j
