@@ -110,6 +110,9 @@ let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn|bundle|idea)|log|tmp|vendor|bin
 let g:ctrlp_cache_dir = $HOME.'/.vim-tmp/ctrlp'
 nmap <leader>b :CtrlPBuffer<CR>
 
+" UltiSnips
+let g:UltiSnipsSnippetsDir = $HOME.'/.vim/snippets'
+let g:UltiSnipsSnippetDirectories = ['snippets']
 " ---
 " GUI
 " ---
