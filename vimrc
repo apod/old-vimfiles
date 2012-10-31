@@ -101,6 +101,15 @@ nmap <leader>h :set list!<CR>
 " Use :SudoWrite to write a file using sudo
 command SudoWrite %!sudo tee > /dev/null %
 
+" ---------------------
+" Plugin Customizations
+" ---------------------
+
+" CtrlP
+let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn|bundle|idea)|log|tmp|vendor|bin'
+let g:ctrlp_cache_dir = $HOME.'/.vim-tmp/ctrlp'
+nmap <leader>b :CtrlPBuffer<CR>
+
 " ---
 " GUI
 " ---
