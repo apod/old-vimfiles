@@ -1,3 +1,13 @@
 snippet lorem "Lorem ipsum - 50 words" b
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec iaculis ipsum sit amet libero adipiscing iaculis. Donec ac ante sapien, ut pretium sapien. Aliquam ut nisi at enim fermentum scelerisque. Nunc sit amet facilisis metus. Nullam et felis elit. Phasellus iaculis, neque eget sollicitudin elementum, sem metus molestie est, in.
 endsnippet
+
+snippet "cbox ([#\/+*"]{1,2})" "Comment box" r
+`!p
+comment = match.group(1)
+snip.rv = comment + ' '  + '-' * len(t[1]) + '\n' + comment + ' '
+`${1:Comment}`!p
+comment = match.group(1)
+snip.rv = '\n' + comment + ' ' + '-' * len(t[1]) + '\n'
+`$0
+endsnippet
