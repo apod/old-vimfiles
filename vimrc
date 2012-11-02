@@ -78,6 +78,12 @@ autocmd FileType javascript     setlocal ts=4 sts=4 sw=4 noet
 nnoremap K <Nop>
 vnoremap K <Nop>
 
+" Remap H and L to move to the first/last character of the line
+nnoremap H ^
+nnoremap L $
+xnoremap H ^
+xnoremap L $
+
 " Move around windows with <C-hjkl>
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
@@ -113,6 +119,7 @@ nmap <leader>b :CtrlPBuffer<CR>
 " UltiSnips
 let g:UltiSnipsSnippetsDir = $HOME.'/.vim/snippets'
 let g:UltiSnipsSnippetDirectories = ['snippets']
+
 " ---
 " GUI
 " ---
