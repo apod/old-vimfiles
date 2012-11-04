@@ -7,6 +7,7 @@ set nocompatible
 
 " Pathogen initialization
 call pathogen#infect()
+call pathogen#infect('~/Projects/Vim/bundle')
 
 " Syntax highlight and file type detection
 syntax enable
