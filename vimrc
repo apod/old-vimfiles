@@ -94,6 +94,10 @@ nnoremap <C-l> <C-w>l
 cnoremap <C-p> <Up>
 cnoremap <C-n> <Down>
 
+" Yank and put to/from the "* register
+vnoremap <leader>y "*y
+nnoremap <leader>p "*p
+
 " Mute highlight until next search
 nmap <leader>l :nohlsearch<CR>
 
