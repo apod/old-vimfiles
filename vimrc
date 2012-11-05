@@ -140,3 +140,22 @@ if has("gui_macvim")
   set guioptions-=r
   set guioptions-=L
 endif
+
+" --------------------
+" FoldModeToggle (WiP)
+" --------------------
+
+nnoremap <leader>f :call FoldModeToggle()<cr>
+
+function! FoldModeToggle()
+  if &foldcolumn
+    setlocal foldcolumn=0
+    setlocal foldmethod=manual
+    normal! zE
+  else
+    setlocal foldcolumn=4
+    setlocal foldmethod=syntax
+    normal! zR
+  endif
+endfunction
+
