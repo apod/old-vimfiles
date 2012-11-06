@@ -53,23 +53,28 @@ set laststatus=2
 " Autocmds
 " --------
 
-" Disable autocommenting on o O
-autocmd FileType * setlocal formatoptions-=o
+augroup filetypes_general
+  autocmd!
 
-" Enable spellchecking for text files
-autocmd FileType text setlocal spell spelllang=en,el
+  " Disable autocommenting on o O
+  autocmd FileType * setlocal formatoptions-=o
 
-" ... and commit logs
-autocmd FileType *commit* setlocal spell
+  " Enable spellchecking for text files
+  autocmd FileType text setlocal spell spelllang=en,el
 
-" Disable it for help files
-autocmd FileType help setlocal nospell
+  " ... and commit logs
+  autocmd FileType *commit* setlocal spell
 
-" Some default whitespace settings
-autocmd FileType ruby,yaml      setlocal ts=2 sts=2 sw=2 et
-autocmd FileType eruby,html,css setlocal ts=4 sts=4 sw=4 et
-autocmd FileType python         setlocal ts=4 sts=4 sw=4 et
-autocmd FileType javascript     setlocal ts=4 sts=4 sw=4 noet
+  " Disable it for help files
+  autocmd FileType help setlocal nospell
+
+  " Some default whitespace settings
+  autocmd FileType ruby,yaml      setlocal ts=2 sts=2 sw=2 et
+  autocmd FileType eruby,html,css setlocal ts=4 sts=4 sw=4 et
+  autocmd FileType python         setlocal ts=4 sts=4 sw=4 et
+  autocmd FileType javascript     setlocal ts=4 sts=4 sw=4 noet
+augroup END
+
 
 " --------
 " Mappings
@@ -128,6 +133,7 @@ let g:UltiSnipsSnippetDirectories = ['snippets']
 " ---
 " GUI
 " ---
+
 if has("gui_macvim")
   set guifont=Menlo:h11 " Change font
 
