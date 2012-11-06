@@ -123,8 +123,35 @@ nmap <silent> <leader>] :TagbarToggle<CR>
 " Commands
 " --------
 
+" :SudoWrite and :Rename borrowed from vim-eunuch
+" https://github.com/tpope/vim-eunuch
+
 " Use :SudoWrite to write a file using sudo
-command SudoWrite %!sudo tee > /dev/null %
+command! -bar SudoWrite :
+      \ setlocal nomodified |
+      \ silent exe 'write !sudo tee % >/dev/null' |
+      \ let &modified = v:shell_error
+
+" Use :Rename to rename a file
+command! -bar -nargs=1 -bang -complete=file Rename :
+      \ let s:src = expand('%:p') |
+      \ let s:dst = expand(<q-args>) |
+      \ if isdirectory(s:dst) |
+      \   let s:dst .= '/' . fnamemodify(s:src, ':t') |
+      \ endif |
+      \ if <bang>1 && filereadable(s:dst) |
+      \   exe 'keepalt saveas '.fnameescape(s:dst) |
+      \ elseif rename(s:src, s:dst) |
+      \   echoerr 'Failed to rename "'.s:src.'" to "'.s:dst.'"' |
+      \ else |
+      \   setlocal modified |
+      \   exe 'keepalt saveas! '.fnameescape(s:dst) |
+      \   if s:src !=# expand('%:p') |
+      \     execute 'bwipe '.fnameescape(s:src) |
+      \   endif |
+      \ endif |
+      \ unlet s:src |
+      \ unlet s:dst
 
 " ---------------------
 " Plugin Customizations
