@@ -110,6 +110,15 @@ nmap <leader>l :nohlsearch<CR>
 " Toggle invisible character symbols
 nmap <leader>h :set list!<CR>
 
+" CtrlP
+nmap <leader>b  :CtrlPBuffer<CR>
+nmap <leader>tb :CtrlPBufTag<CR>
+nmap <leader>ta :CtrlPBufTagAll<CR>
+nmap <leader>tt :CtrlPTag<CR>
+
+" Tagbar
+nmap <silent> <leader>] :TagbarToggle<CR>
+
 " --------
 " Commands
 " --------
@@ -124,7 +133,6 @@ command SudoWrite %!sudo tee > /dev/null %
 " CtrlP
 let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn|bundle|idea)|log|tmp|vendor|bin'
 let g:ctrlp_cache_dir = $HOME.'/.vim-tmp/ctrlp'
-nmap <leader>b :CtrlPBuffer<CR>
 
 " UltiSnips
 let g:UltiSnipsSnippetsDir = $HOME.'/.vim/snippets'
