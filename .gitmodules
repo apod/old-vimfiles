@@ -64,3 +64,6 @@
 [submodule "bundle/colors-jellybeans"]
 	path = bundle/colors-jellybeans
 	url = https://github.com/nanotech/jellybeans.vim.git
+[submodule "bundle/colors-hemisu"]
+	path = bundle/colors-hemisu
+	url = https://github.com/noahfrederick/Hemisu.git
