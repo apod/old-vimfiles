@@ -75,7 +75,6 @@ augroup filetypes_general
   autocmd FileType javascript     setlocal ts=4 sts=4 sw=4 noet
 augroup END
 
-
 " --------
 " Mappings
 " --------
@@ -119,6 +118,8 @@ nmap <leader>tt :CtrlPTag<CR>
 " Tagbar
 nmap <silent> <leader>] :TagbarToggle<CR>
 
+" NERDTree
+nmap <silent> <leader>[ :NERDTreeToggle<CR>
 " --------
 " Commands
 " --------
@@ -165,6 +166,11 @@ let g:ctrlp_cache_dir = $HOME.'/.vim-tmp/ctrlp'
 let g:UltiSnipsSnippetsDir = $HOME.'/.vim/snippets'
 let g:UltiSnipsSnippetDirectories = ['snippets']
 
+" NERDTree
+let g:NERDTreeShowHidden = 1   " Show hidden files by default
+let g:NERDTreeHijackNetrw = 0  " Use netrw instead of NERDTree on :Explore
+let g:NERDTreeIgnore = ['\~$', '\.git$']
+
 " ---
 " GUI
 " ---
@@ -186,7 +192,7 @@ endif
 " FoldModeToggle (WiP)
 " --------------------
 
-nnoremap <leader>f :call FoldModeToggle()<cr>
+nnoremap <leader>f :call FoldModeToggle()<CR>
 
 function! FoldModeToggle()
   if &foldcolumn
