@@ -44,7 +44,7 @@ set backspace=indent,eol,start
 " Default whitespace for all files
 set ts=2 sts=2 sw=2 expandtab
 
-colorscheme monokai_customized
+colorscheme molokai
 
 " Always show status line
 set laststatus=2
