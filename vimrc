@@ -75,6 +75,17 @@ augroup filetypes_general
   autocmd FileType javascript     setlocal ts=4 sts=4 sw=4 noet
 augroup END
 
+
+function! NetrwMappings()
+  nnoremap <buffer><silent> o :<C-u>execute "call feedkeys('\r')"<cr>
+endfunction
+
+augroup netrw_mappings
+  autocmd!
+
+  autocmd FileType netrw call NetrwMappings()
+augroup END
+
 " --------
 " Mappings
 " --------
