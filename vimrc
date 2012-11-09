@@ -112,7 +112,8 @@ cnoremap <C-n> <Down>
 
 " Yank and put to/from the "* register
 vnoremap <leader>y "*y
-nnoremap <leader>p "*p
+nnoremap <leader>p :put *<CR>
+nnoremap <leader>P :put! *<CR>
 
 " Mute highlight until next search
 nmap <leader>l :nohlsearch<CR>
@@ -131,6 +132,7 @@ nmap <silent> <leader>] :TagbarToggle<CR>
 
 " NERDTree
 nmap <silent> <leader>[ :NERDTreeToggle<CR>
+
 " --------
 " Commands
 " --------
