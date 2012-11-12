@@ -121,6 +121,10 @@ nmap <leader>l :nohlsearch<CR>
 " Toggle invisible character symbols
 nmap <leader>h :set list!<CR>
 
+" Map <leader>e to pen files in the same directory as the current file
+cnoremap %% <C-r>=expand('%:h') . '/'<CR>
+nmap <leader>e :edit %%
+
 " CtrlP
 nmap <leader>b  :CtrlPBuffer<CR>
 nmap <leader>tb :CtrlPBufTag<CR>
