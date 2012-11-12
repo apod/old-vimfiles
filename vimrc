@@ -125,6 +125,9 @@ nmap <silent> <leader>h :set list!<CR>
 cnoremap %% <C-r>=expand('%:h') . '/'<CR>
 nmap <leader>e :edit %%
 
+" Map <leader><leader> to switch to alternate file <C-^>
+nmap <leader><leader> <C-^>
+
 " CtrlP
 nmap <leader>b  :CtrlPBuffer<CR>
 nmap <leader>tb :CtrlPBufTag<CR>
