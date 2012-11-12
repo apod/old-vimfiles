@@ -116,10 +116,10 @@ nnoremap <leader>p :put *<CR>
 nnoremap <leader>P :put! *<CR>
 
 " Mute highlight until next search
-nmap <leader>l :nohlsearch<CR>
+nmap <silent> <leader>l :nohlsearch<CR>
 
 " Toggle invisible character symbols
-nmap <leader>h :set list!<CR>
+nmap <silent> <leader>h :set list!<CR>
 
 " Map <leader>e to pen files in the same directory as the current file
 cnoremap %% <C-r>=expand('%:h') . '/'<CR>
