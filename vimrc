@@ -88,7 +88,7 @@ augroup netrw_mappings
 augroup END
 
 function! CoffeScriptMappings()
-  nnoremap <leader>cc :CoffeeCompile vert"<cr>
+  nnoremap <leader>cc :CoffeeCompile vert"<cr><C-w>h
   nnoremap <leader>cw :CoffeeCompile watch vert"<cr>
 endfunction
 
