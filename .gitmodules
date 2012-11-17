@@ -70,3 +70,6 @@
 [submodule "bundle/vim-tcomment"]
 	path = bundle/vim-tcomment
 	url = https://github.com/tomtom/tcomment_vim.git
+[submodule "bundle/vim-coffee-script"]
+	path = bundle/vim-coffee-script
+	url = https://github.com/kchmck/vim-coffee-script.git
