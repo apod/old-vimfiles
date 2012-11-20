@@ -8,3 +8,56 @@ snippet "^# ?[uU][tT]?[fF]?-?8?" "# encoding: UTF-8" r
 $0
 endsnippet
 
+# ----------
+# Test::Unit
+# ----------
+snippet tc "class ... < Test::Unit::TestCase" b
+require 'test/unit'
+
+class `!p 
+words = snip.basename.split('_')
+snip.rv = ''.join(w.capitalize() for w in words)
+` < Test::Unit::TestCase
+  $0
+end
+endsnippet
+
+snippet dt "def test_" b
+def test_$1
+  $0
+end
+endsnippet
+
+snippet as "assert" b
+assert ${1:true}, '${0:message}'
+endsnippet
+
+snippet ase "assert_equal" b
+assert_equal ${1:expected}, ${0:actual}
+endsnippet
+
+snippet asne "assert_not_equal" b
+assert_not_equal ${1:unexpected}, ${0:actual}
+endsnippet
+
+snippet asr "assert_raise" b
+assert_raise(${1:exception}) { $0 }
+endsnippet
+
+snippet asrt "assert_respond_to" b
+assert_respond_to ${1:object}, :${0:method}
+endsnippet
+
+# ---------
+# Benchmark
+# ---------
+snippet "^bench(mark)?" "require 'benchmark' ..." r
+#!/usr/bin/env ruby
+require 'benchmark'
+
+Benchmark.bmbm do |b|
+  b.report('${1:some_method}') do
+    $0
+  end
+end
+endsnippet
