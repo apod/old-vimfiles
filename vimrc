@@ -156,6 +156,35 @@ nmap <silent> <leader>[ :NERDTreeToggle<CR>
 " Commands
 " --------
 
+" Extract visual selection
+xnoremap <leader>r :ExtractVisualSelection <C-r>=expand('%:h') . '/'<CR>
+
+command! -range -bar -nargs=1 -bang -complete=file ExtractVisualSelection :
+      \ let s:starts_at = expand(<line1>) |
+      \ let s:ends_at = expand(<line2>) |
+      \ let s:dst = expand(<q-args>) |
+      \ let s:error = 0 |
+      \ if isdirectory(s:dst) |
+      \   echoerr 'Filepath is a directory' |
+      \   let s:error = 1 |
+      \ elseif <bang>0 && filereadable(s:dst) |
+      \   let s:error = 0 |
+      \ elseif filereadable(s:dst) |
+      \   echoerr 'File already exists use ! to overwrite' |
+      \   let s:error = 1 |
+      \ endif |
+      \ if !s:error |
+      \   execute s:starts_at . ',' . s:ends_at . 'write<bang>' . s:dst |
+      \   execute s:starts_at . ',' . s:ends_at . 'delete' |
+      \   execute 'rightbelow vsplit' . s:dst |
+      \   execute 'normal =G' |
+      \ endif |
+      \ unlet s:starts_at |
+      \ unlet s:ends_at |
+      \ unlet s:dst |
+      \ unlet s:error
+
+
 " :SudoWrite and :Rename borrowed from vim-eunuch
 " https://github.com/tpope/vim-eunuch
 
