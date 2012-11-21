@@ -140,6 +140,9 @@ nmap <leader>e :edit %%
 " Map <leader><leader> to switch to alternate file <C-^>
 nmap <leader><leader> <C-^>
 
+" Fugitive
+nmap <leader>gst :Gstatus<CR>
+
 " CtrlP
 nmap <leader>b  :CtrlPBuffer<CR>
 nmap <leader>tb :CtrlPBufTag<CR>
