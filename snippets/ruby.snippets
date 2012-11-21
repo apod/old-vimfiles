@@ -11,7 +11,7 @@ endsnippet
 # ----------
 # Test::Unit
 # ----------
-snippet tc "class ... < Test::Unit::TestCase" b
+snippet "^tc" "class ... < Test::Unit::TestCase" r
 require 'test/unit'
 
 class `!p 
@@ -46,6 +46,70 @@ endsnippet
 
 snippet asrt "assert_respond_to" b
 assert_respond_to ${1:object}, :${0:method}
+endsnippet
+
+# -----
+# RSpec
+# -----
+snippet "^rspec" "require 'spec_helper'" r
+require 'spec_helper'
+require '`!p
+words = snip.basename.split('_')
+words.remove('spec')
+snip.rv = ''.join(words)
+`'
+
+describe `!p 
+words = snip.basename.split('_')
+words.remove('spec')
+snip.rv = ''.join(w.capitalize() for w in words)
+` do
+  $0
+end
+endsnippet
+
+snippet des "describe '' do...end" b
+describe '$1' do
+  $0
+end
+endsnippet
+
+snippet con "context '' do...end" b
+context '$1' do
+  $0
+end
+endsnippet
+
+snippet sub "subject {...}" b
+subject { $0 }
+endsnippet
+
+snippet let "let(:var) {...}" b
+let(:${1:var}) { $0 }
+endsnippet
+
+snippet bef "before do...end" b
+before do
+  $0
+end
+endsnippet
+
+snippet bef{ "before { ... }" b
+before { $0 }
+endsnippet
+
+snippet it "it '' do...end" b
+it '$1' do
+  $0
+end
+endsnippet
+
+snippet it{ "it { should... }" b
+it { should $0 }
+endsnippet
+
+snippet its "its(:something) { should...} " b
+its(:${1:something}) { should $0 }
 endsnippet
 
 # ---------
