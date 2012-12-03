@@ -101,6 +101,8 @@ augroup END
 function! RubyMappings()
   nmap <leader>mm <Plug>(xmpfilter-mark)
   nmap <leader>mn <Plug>(xmpfilter-run)
+  vmap <leader>mm <Plug>(xmpfilter-mark)
+  vmap <leader>mn <Plug>(xmpfilter-run)
 endfunction
 
 augroup ruby_mappings
