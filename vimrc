@@ -98,6 +98,17 @@ augroup coffeescript_mappings
   autocmd FileType coffee call CoffeScriptMappings()
 augroup END
 
+function! RubyMappings()
+  nmap <leader>mm <Plug>(xmpfilter-mark)
+  nmap <leader>mn <Plug>(xmpfilter-run)
+endfunction
+
+augroup ruby_mappings
+  autocmd!
+
+  autocmd FileType ruby call RubyMappings()
+augroup END
+
 " --------
 " Mappings
 " --------
