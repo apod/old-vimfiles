@@ -235,6 +235,13 @@ let g:NERDTreeShowHidden = 1   " Show hidden files by default
 let g:NERDTreeHijackNetrw = 0  " Use netrw instead of NERDTree on :Explore
 let g:NERDTreeIgnore = ['\~$', '\.git$']
 
+" Gist
+let g:gist_post_private = 1
+let g:gist_show_privates = 1
+let g:gist_detect_filetype = 1
+let g:gist_open_browser_after_post = 1
+let g:gist_get_multiplefile = 1
+
 " ---
 " GUI
 " ---
