@@ -135,6 +135,9 @@ nnoremap <C-l> <C-w>l
 cnoremap <C-p> <Up>
 cnoremap <C-n> <Down>
 
+" <C-a> should move the cursor position to the start of the command-line
+cnoremap <C-a> <Home>
+
 " Yank and put to/from the "* register
 vnoremap <leader>y "*y
 nnoremap <leader>p :put *<CR>
