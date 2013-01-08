@@ -115,6 +115,12 @@ augroup END
 " Mappings
 " --------
 
+" Switch j/k with gj/gk to move on display lines
+nnoremap j gj
+nnoremap k gk
+nnoremap gj j
+nnoremap gk k
+
 " Remap manual page key K to nothing
 nnoremap K <Nop>
 vnoremap K <Nop>
