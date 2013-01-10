@@ -72,6 +72,7 @@ augroup filetypes_general
   autocmd FileType ruby,yaml      setlocal ts=2 sts=2 sw=2 et
   autocmd FileType eruby,html,css setlocal ts=4 sts=4 sw=4 et
   autocmd FileType python         setlocal ts=4 sts=4 sw=4 et
+  autocmd FileType javascript     setlocal ts=2 sts=2 sw=2 et
   autocmd FileType coffee         setlocal ts=2 sts=2 sw=2 et
 augroup END
 
@@ -114,6 +115,12 @@ augroup END
 " Mappings
 " --------
 
+" Switch j/k with gj/gk to move on display lines
+nnoremap j gj
+nnoremap k gk
+nnoremap gj j
+nnoremap gk k
+
 " Remap manual page key K to nothing
 nnoremap K <Nop>
 vnoremap K <Nop>
@@ -133,6 +140,9 @@ nnoremap <C-l> <C-w>l
 " <C-pn> should filter the command history like <Up>/<Down>
 cnoremap <C-p> <Up>
 cnoremap <C-n> <Down>
+
+" <C-a> should move the cursor position to the start of the command-line
+cnoremap <C-a> <Home>
 
 " Yank and put to/from the "* register
 vnoremap <leader>y "*y
