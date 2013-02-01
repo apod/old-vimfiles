@@ -49,6 +49,9 @@ colorscheme jellybeans
 " Always show status line
 set laststatus=2
 
+" Keycode sequence timeout (ms)
+set ttimeoutlen=100
+
 " --------
 " Autocmds
 " --------
