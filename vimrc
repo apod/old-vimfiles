@@ -235,7 +235,11 @@ command! -bar -nargs=1 -bang -complete=file Rename :
 " ---------------------
 
 " CtrlP
-let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn|bundle|idea)|log|tmp|vendor|bin'
+let g:ctrlp_custom_ignore = { 
+      \ 'dir': '\v[\/]\.(git|hg|svn|bundle|idea)|log|tmp|vendor|bin',
+      \ 'file': '\v\.(exe|jpg|png|gif|swf)$',
+      \ }
+
 let g:ctrlp_cache_dir = $HOME.'/.vim-tmp/ctrlp'
 
 " UltiSnips
