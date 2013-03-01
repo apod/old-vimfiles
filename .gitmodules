@@ -100,3 +100,6 @@
 [submodule "bundle/vim-seek"]
 	path = bundle/vim-seek
 	url = https://github.com/goldfeld/vim-seek.git
+[submodule "bundle/vim-slim"]
+	path = bundle/vim-slim
+	url = https://github.com/slim-template/vim-slim.git
