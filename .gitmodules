@@ -112,3 +112,6 @@
 [submodule "bundle/vim-tabular"]
 	path = bundle/vim-tabular
 	url = https://github.com/godlygeek/tabular.git
+[submodule "bundle/vim-delimitMate"]
+	path = bundle/vim-delimitMate
+	url = https://github.com/Raimondi/delimitMate.git
