@@ -27,6 +27,9 @@ set smartcase                     " But case-sensitive if expression contains a 
 set wrap                          " Turn on line wrapping.
 set scrolloff=3                   " Show 3 lines of context around the cursor.
 
+" Relative line numbers
+set relativenumber
+
 " Invisible character symbols
 set listchars=tab:▶\ ,eol:¬
 
