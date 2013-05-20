@@ -261,6 +261,9 @@ let g:gist_detect_filetype = 1
 let g:gist_open_browser_after_post = 1
 let g:gist_get_multiplefile = 1
 
+" Switch
+nnoremap - :Switch<cr>
+
 " ---
 " GUI
 " ---
@@ -295,4 +298,3 @@ function! FoldModeToggle()
     normal! zR
   endif
 endfunction
-

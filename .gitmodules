@@ -127,3 +127,6 @@
 [submodule "bundle/LearnVim"]
 	path = bundle/LearnVim
 	url = https://github.com/dahu/LearnVim.git
+[submodule "bundle/vim-switch"]
+	path = bundle/vim-switch
+	url = https://github.com/AndrewRadev/switch.vim
