@@ -124,3 +124,6 @@
 [submodule "bundle/vim-switch"]
 	path = bundle/vim-switch
 	url = https://github.com/AndrewRadev/switch.vim
+[submodule "bundle/vim-json"]
+	path = bundle/vim-json
+	url = https://github.com/elzr/vim-json.git
